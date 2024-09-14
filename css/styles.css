@@ -1,0 +1,175 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/*Header start*/
+.header-top {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 18px 0;
+    box-shadow: 6px 23px 11px rgba(0, 0, 0, 0.08), 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-top img {
+    width: 32px;
+    height: 32px;
+}
+
+.header-info img {
+    max-width: 24px;
+    max-height: 24px;
+    margin-right: 16px;
+}
+
+.header-row {
+    display: flex;
+    text-decoration: none;
+}
+
+.header-right {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    column-gap: 48px;
+}
+
+.header-info {
+    display: flex;
+}
+
+.header-phone {
+    color: goldenrod;
+    text-decoration-line: underline;
+}
+
+.header-phone a:hover {
+    text-decoration: underline;
+    text-decoration-color: gold;
+    color: gold;
+}
+
+.header-desc img {
+    width: 60px;
+    height: 60px;
+}
+
+.header-center {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.header-menu {
+    display: flex;
+    column-gap: 16px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    text-decoration-line: underline;
+    font-size: 20px;
+}
+
+.header-menu a:hover {
+    text-decoration-line: underline;
+    text-decoration-color: orangered;
+    color: red;
+}
+
+.header-social #whatsapp img{
+    width: 25px;
+    height: 25px;
+    margin-right: 6px;
+}
+
+.header-social {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+/*Header end*/
